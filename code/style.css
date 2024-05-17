@@ -128,19 +128,17 @@ p {
 
 #NousSoutenir {
     width: 100dvw;
-    height: 120dvh;
+    height: 300dvh;
     display: flex;
-    background-color: rgba(210, 105, 30, 0.842);
+    background-color: #5e2c09;
     flex-direction: column;
-    justify-content: center;
-    gap: 2.5%;
 }
 
 #headText {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 30%;
+    height: 15%;
     justify-content: center;
     gap: 10%;
 }
@@ -152,52 +150,65 @@ p1 {
 
 #content {
     display: flex;
-    flex-direction: row;
-    height: 60%;
-    justify-content: center;
-    gap: 2.5%;
+    flex-direction: column;
+    height: 85%;
+    justify-content: space-evenly;
 }
 
-.container {
+.container,
+.contenter-reversed {
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 22.5%;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    border: 1px solid black;
     border-radius: 15px;
+    gap: 10%;
+}
+
+.contenter-reversed {
+    flex-direction: row-reverse;
+}
+
+.donationInfo {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
 
 }
 
 .donationImg {
-    width: 60%;
-    height: 40%;
-    border-radius: 50%;
-    background-color: black;
+    width: 30%;
+    height: 100%;
+    border-radius: 35%;
 }
 
 p2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: white;
 }
 
-p3 {
-    font-size: 1rem;
-}
-
-p4 {
-    font-size: 1.6rem;
-}
-
-p5 {
-    font-size: 1.25rem;
+.HEI {
+    color: aquamarine;
 }
 
 .amount {
-    width: 60%;
-    height: 10%;
-    background-color: aliceblue;
+    width: 40%;
+    height: 15%;
+    background-color: goldenrod;
     align-content: center;
-    border-radius: 20px;
+    border-radius: 10px;
+}
+
+.amount:hover {
+    background-color: white;
+}
+
+#AboutUsInfo {
+    background-color: black;
 }
