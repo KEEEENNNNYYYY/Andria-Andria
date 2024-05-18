@@ -5,11 +5,25 @@
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 1px;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
-    height: 10000px;
+    /*background-image: url('../asset/walp1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+    height: 5000px;
+    /*background-color: grey;*/
+    background-color: antiquewhite;
 }
+
 
 a {
     text-decoration: none;
@@ -107,8 +121,7 @@ hero {
 
 h2 {
     font-size: 4rem;
-    color: rgba(255, 255, 255, 0.918);
-
+    color: gold;
 }
 
 p {
@@ -127,11 +140,58 @@ p {
     background-color: goldenrod;
 }
 
+#about-us-info-container {
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    justify-content: space-evenly;
+    width: 100dvw;
+    height: 200dvh;
+    z-index: 20;
+    align-items: center;
+}
+
+.about-us-info,
+.about-us-info-reversed {
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+    text-align: left;
+    overflow: hidden;
+}
+
+.about-us-info-reversed {
+    flex-direction: row-reverse !important;
+}
+
+.about-us-image {
+    width: 35%;
+    height: 100%;
+}
+
+p5 {
+    font-size: 2.5rem;
+}
+
+p6 {
+    font-size: 2rem;
+    text-align: right;
+}
+
 #nous-soutenir {
     width: 100dvw;
-    height: 120dvh;
+    height: 80dvh;
     display: flex;
-    background-color: #5e2c09c4;
+    /* background-color: #5e2c09c4;
+    background-color: #944105;*/
     flex-direction: column;
     justify-content: space-between;
 }
@@ -145,68 +205,29 @@ p {
     gap: 10%;
 }
 
+h3 {
+    color: goldenrod;
+    font-size: 4rem;
+}
+
 p1 {
     font-size: 2rem;
-    color: white;
+    color: rgb(0, 0, 0);
 }
-
-#donation-container {
-    background-color: red;
-    width: 100%;
-    height: 66%;
-    display: flex;
-}
-
-.image-container {
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.aside-left {
-    border: 1px solid pink;
-    height: 100%;
-    width: 30%;
-}
-
-.aside-right {
-    border: 1px solid violet;
-    height: 100%;
-    width: 70%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    background-image: url('../asset/world-map.jpg');
-}
-
-
-.aside-right::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.45);
-    z-index: 1;
-}
-
 
 #donation-info-container {
+    position: relative;
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 90%;
+    height: 80%;
     z-index: 20;
     align-items: center;
+    /*overflow: hidden;
     overflow-x: hidden;
+    overflow-y: hidden;*/
     flex-shrink: 0;
     flex-wrap: wrap-reverse;
-
 }
 
 #donation-carousel {
@@ -214,10 +235,13 @@ p1 {
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-behavior: smooth;
-    width: 100%;
+    width: 100dvw;
     height: 100%;
     z-index: 20;
     align-items: center;
+    transition: transform 0.5s ease;
+    /*overflow: hidden;*/
+    background-color: red;
 }
 
 .donation-info {
@@ -234,14 +258,37 @@ p1 {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.815);
     margin-right: 2%;
     text-align: center;
+    /*overflow: hidden;*/
+}
+
+#button-next,
+#button-previous {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#button-next {
+    right: 0;
+}
+
+#button-previous {
+    left: 0;
 }
 
 p2 {
-    color: white;
+    color: black;
+    font-size: 2rem;
 }
 
 .HEI {
-    color: aquamarine;
+    color: goldenrod;
 }
 
 .amount {
@@ -255,50 +302,3 @@ p2 {
 .amount:hover {
     background-color: aquamarine;
 }
-
-/*
-.container,
-.contenter-reversed {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 20%;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    border-radius: 15px;
-    gap: 10%;
-}
-
-.contenter-reversed {
-    flex-direction: row-reverse;
-}
-
-.donationInfo {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    height: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-
-}
-
-.donationImg {
-    width: 30%;
-    height: 100%;
-    border-radius: 35%;
-}
-
-p2 {
-    font-size: 2rem;
-    color: white;
-}
-
-
-
-
-
-#AboutUsInfo {
-    background-color: black;
-}*/
