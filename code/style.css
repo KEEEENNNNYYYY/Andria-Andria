@@ -492,3 +492,76 @@ svg {
     opacity: 0;
     transition: transform 1s, opacity 1s;
 }
+
+
+@media all and (max-width:700px) {
+
+    nav{
+        width: 100%;
+        justify-content: space-between;
+    }
+    nav h1{
+        font-size: 1.5rem;
+        width: 50dvw;
+        gap: 10%;
+    }
+    .home{
+        display: none;
+    }
+    nav a{
+        font-size: 1rem;
+    }
+    #logo{
+        width: 20dvw;
+    }
+    #button{
+        width: 50dvw;
+        justify-content: center;
+    }
+    #Donate{
+        width: 75%;
+        height: 50%;
+    }
+    header{
+        flex-direction: column;
+        text-align: center;
+        height: 50dvh;
+        justify-content: center;
+    }
+
+    header > .container{
+        display: none;
+        
+    }
+
+    header > h1{
+        font-size: 3rem;
+        top: 15dvh;
+        left: 10dvw;
+        right: auto;
+
+    }
+    header > p {
+        top: 24dvh;
+        left: 10dvw;
+        right: auto;
+        width:80dvw ;
+    }
+    #DonateNow{
+        top: 40dvh;
+        left: 15dvw;
+        width: 70dvw;
+        height: 7.5dvh;
+        font-size: 2rem;
+        border: 1px solid goldenrod;
+        border-radius: 20px;
+    }
+    #DonateNow img{
+        width: 20%;
+        height: 70%;
+        
+    }
+    header hr{
+        display: none;
+    }
+}
