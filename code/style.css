@@ -91,8 +91,12 @@ a {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     border: 0.5px solid white;
+    text-align: center;
+    transition: all 0.2s;
 }
-
+#Donate:hover{
+    background-color: gold;
+}
 @keyframes up {
     0% {}
 
@@ -396,7 +400,7 @@ header>p {
     transition: all 0.2s;
 }
 .HEI:hover{
-    color: rgb(255, 199, 95);
+    color: gold;
 }
 footer {
     display: flex;
