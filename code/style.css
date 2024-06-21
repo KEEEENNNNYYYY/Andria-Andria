@@ -391,7 +391,12 @@ header>p {
     width: 60%;
     height: 35%;
 }
-
+.HEI{
+    transition: all 0.2s;
+}
+.HEI:hover{
+    color: rgb(255, 199, 95);
+}
 footer {
     display: flex;
     flex-direction: column;
@@ -438,7 +443,13 @@ svg {
 }
 .text_conteneur_2 > a{
     margin-left: 50%;
+    transition: all 0.2s;
 }
+.text_conteneur_2 > a:hover{
+    color:goldenrod ;
+    transform: translateX(5px);
+}
+
 .text_conteneur_2>h1 {
     font-size: 1.5rem;
     height: 20%;
