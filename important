@@ -1,0 +1,29 @@
+theme general:clair
+
+code couleur:
+rgb(250, 214, 147)
+
+
+elements principaux:
+-hero image:ne pas changer le texte;par contre l'image....
+-but:trouver une image façon google pour illustrer des eleves montrons ainsi l'education:hr et border left needed,text gauche image droite
+-zone d'action:Terre a gauche mada a droite lié par jsp text top et bottom
+-pour qui? liste hr à chaque separation bouton à droite display donation info
+-par qui/à propos:text classic sur un fond de meme couleur que le code couleur
+-footer
+
+/!\
+
+l'utilisation de hr pour separer chaque partie du site
+
+bien separer le site mobile et pc pour une meilleur animationti 
+
+bien dispatcher la presentation des textes 
+
+logo absent donc le code couleur et le theme peuvent etre libre
+
+ne pas utiliser de photo reel à cause des confidentialité,
+droit d'auteur etc...
+
+/!\ 
+

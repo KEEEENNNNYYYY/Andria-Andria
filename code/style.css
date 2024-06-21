@@ -6,11 +6,16 @@
 }
 
 ::-webkit-scrollbar {
-    width: 1px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    width: 1px;
+    background-color: #888;
+    border-radius: 10px;
 }
 
 body {
@@ -20,7 +25,6 @@ body {
     background-position: center;
     background-size: cover;*/
     /*background-color: grey;*/
-    background-color: antiquewhite;
     overflow-x: hidden;
     /*height: 10000px;*/
 }
@@ -32,15 +36,16 @@ a {
 }
 
 nav {
-    background-color: rgba(230, 230, 230, 0.753);
+    /*background-color: rgb(250, 214, 147);*/
+    border-bottom: 1px solid rgb(250, 214, 147);
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: sticky;
     top: 0;
     width: 100dvw;
-    height: 9dvh;
-    gap: 30%;
+    height: 10dvh;
+    gap: 10%;
     text-align: center;
     align-items: center;
     backdrop-filter: blur(4px);
@@ -53,7 +58,7 @@ nav {
 
 .home:hover {
     color: goldenrod;
-    transform: scale(1.5);
+    transform: scale(1.25);
 }
 
 h1 {
@@ -77,12 +82,25 @@ a {
 
 #Donate {
     display: flex;
-
     background-color: goldenrod;
-    /*border: 0.5px solid;*/
     width: 30%;
     height: 60%;
     border-radius: 5px;
+    animation: alternate;
+    animation-name: up;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border: 0.5px solid white;
+}
+
+@keyframes up {
+    0% {}
+
+    50% {
+        transform: translateY(10%);
+    }
+
+    100% {}
 }
 
 .donateText {
@@ -91,201 +109,371 @@ a {
     align-content: center;
 }
 
+
 header {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.608);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100dvw;
-    height: 100dvh;
-    display: flex;
-    flex-direction: column-reverse;
-    background-image: url('../asset/walp3.jpg');
-}
-
-header::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-hero {
     display: flex;
     flex-direction: column;
+    width: 100dvw;
+    height: 90dvh;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 62.5%;
     text-align: center;
-    backdrop-filter: blur(4px);
-    gap: 10%;
-    z-index: 3;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    height: 90dvh;
+    position: relative;
+    animation-name: background_appear;
+    animation-duration: 2.5s;
+    animation-direction: alternate;
+    background-image: url("../asset/hero_image1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 255, 0);
+}
 
-h2 {
+@keyframes background_appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+header>h1 {
+    width: 50%;
+    height: 10%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    text-align: center;
     font-size: 4rem;
-    color: gold;
+    position: absolute;
+    top: 20dvh;
+    right: 10dvh;
+    opacity: 0;
+    animation-name: text_appear;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 }
 
-p {
-    font-size: 2rem;
-    color: rgba(255, 255, 255, 0.918);
+@keyframes text_appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h1>hr {
+    margin-top: 1.4%;
+    width: 10%;
+    border: 2.5px solid goldenrod;
+    margin-left: 18%;
+}
+
+header>p {
+    width: 50%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    position: absolute;
+    top: 35dvh;
+    right: 5dvh;
+    opacity: 0;
+    animation-name: text_appear;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 }
 
 #DonateNow {
-    width: 25%;
-    height: 14%;
-    border-radius: 10px;
+    bottom: 10dvh;
+    left: 5dvw;
     display: flex;
+    position: absolute;
+    font-size: 2.5rem;
+    color: black;
+    transition: color 0.3s ease;
+    opacity: 0;
+    animation-name: text_appear;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 20%;
 }
 
 #DonateNow:hover {
-    background-color: goldenrod;
+    color: goldenrod;
 }
 
-#about-us-info-container {
+#DonateNow>img {
+    width: 15%;
+    height: 50%;
+    margin-left: 2%;
+    animation-name: arrow_move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes arrow_move {
+    from {}
+
+    to {
+        transform: translateX(2dvw);
+    }
+}
+
+.location {
     display: flex;
     flex-direction: column;
-    scroll-behavior: smooth;
+    width: 90dvw;
+    height: 100dvh;
     justify-content: space-evenly;
-    width: 100dvw;
-    height: 200dvh;
-    z-index: 20;
     align-items: center;
+    align-content: center;
+    position: relative;
+    border-top: 1px solid gold;
+    margin: 0 auto;
 }
 
-.about-us-info,
-.about-us-info-reversed {
+.location>h1 {
+    text-align: center;
+}
+
+.item {
+    width: 100%;
+    height: 75%;
     display: flex;
     flex-direction: row;
-    height: 30%;
-    width: 95%;
-    align-items: center;
     justify-content: center;
-    gap: 2%;
-    border-radius: 50px;
-    backdrop-filter: blur(4px);
+    align-items: center;
+    align-content: center;
+    gap: 10%;
+    position: relative;
     z-index: 2;
-    text-align: left;
-    overflow: hidden;
-    gap: 5%;
 }
 
-.about-us-info-reversed {
-    flex-direction: row-reverse !important;
-}
-
-.about-us-image {
-    width: 27.5%;
+.item_container {
+    width: 30%;
     height: 90%;
-    box-shadow: 5px 5px 15px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item_container>img {
+    height: 60%;
+    width: 100%;
+    z-index: 20;
     border-radius: 50%;
 }
 
-p5 {
-    font-size: 2rem;
+.item_container>img:hover {
+    transition: 1s;
+    transform: scale(1.25);
 }
 
-p6 {
-    font-size: 2rem;
-    text-align: right;
-}
-
-#nous-soutenir {
-    width: 100dvw;
-    height: 100dvh;
+.linker {
+    border-top: 10px dotted gold;
+    border-bottom: 10px dotted gold;
+    border-right: 10px dotted white;
+    border-radius: 50%;
+    width: 30%;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    position: absolute;
+    top: 10dvh;
+    left: 35dvw;
+    z-index: 1;
+    scale: 1.1;
+    /*animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;*/
 }
-
-#head-text {
+/*
+@keyframes rotation {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.05);
+    }
+}*/
+.but {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: 30%;
+    flex-direction: row;
     justify-content: center;
-    gap: 10%;
-}
-
-h3 {
-    color: goldenrod;
-    font-size: 4rem;
-}
-
-p1 {
-    font-size: 2rem;
-    color: rgb(0, 0, 0);
-}
-
-#donation-info-container {
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-}
-
-.in-donation-container {
-    width: 80%;
-    height: 70%;
-    border: 10px solid white;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    border-radius: 40px;
-    margin-bottom: 10%;
-}
-
-
-
-.donation-info {
-    display: flex;
-    flex-direction: column;
-    height: 80%;
-    align-items: center;
-    justify-content: center;
-    gap: 10%;
-    width: 90%;
-    border-radius: 50px;
-    backdrop-filter: blur(4px);
-    z-index: 2;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.815);
-    text-align: center;
-    margin-left: 5%;
-    margin-top: 2%;
-}
-
-p2 {
-    color: black;
-    font-size: 2rem;
-}
-
-.HEI {
-    color: goldenrod;
-}
-
-.amount {
-    width: 40%;
-    height: 15%;
-    background-color: goldenrod;
-    align-content: center;
-    border-radius: 10px;
-    text-align: center;
-    display: flex;
+    gap: 7.5%;
+    width: 95dvw;
+    height: 60dvh;
     margin: 0 auto;
     align-items: center;
+    border-top: 1px solid goldenrod;
+
+}
+
+.but_text_container {
+    display: flex;
+    border-left: 4px solid gold;
+    width: 50%;
+    height: 40%;
+    flex-direction: column;
+    gap: 10%;
+    margin-bottom: 9%;
+    padding-left: 1.5%;
+    overflow-x: hidden;
+}
+
+.don {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 95dvw;
+    height: 130dvh;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.don>h1 {
+    height: 10dvh;
+}
+
+.don_container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30dvh;
+    border-top: 1px solid gold;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.don_text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    gap: 20%;
+    padding-left: 4%;
+    align-content: center;
     justify-content: center;
 }
 
-.amount:hover {
-    background-color: aquamarine;
+.don_container>a {
+    display: flex;
+    width: 10%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.don_container>a>img {
+    width: 60%;
+    height: 35%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 70dvh;
+    width: 100dvw;
+}
+
+svg {
+    height: 30%;
+    width: 100%;
+}
+
+.conteneur1 {
+    background-color: rgb(250, 214, 147);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+}
+
+.text_conteneur_1 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    padding-left: 2.5%;
+    justify-content: center;
+    gap: 10%;
+}
+
+.text_conteneur_1>h1 {
+    font-size: 1.5rem;
+}
+
+.text_conteneur_2 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 15%;
+    height: 100%;
+    justify-content: center;
+    gap: 3%;
+    background-color: red;
+
+}
+.text_conteneur_2 > a{
+    margin-left: 50%;
+}
+.text_conteneur_2>h1 {
+    font-size: 1.5rem;
+    height: 20%;
+    width: 20%;
+    margin-left: 35%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 2%;
+    border-bottom: 4px solid gold;
+    margin-bottom: 2%;
+}
+
+.conteneur2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    gap: 10%;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(250, 214, 147);
+
+}
+
+.text_conteneur_2 img {
+    width: 5%;
+    height:75%;
+}
+
+#location_text {
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
 }
