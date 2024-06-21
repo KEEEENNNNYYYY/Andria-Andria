@@ -282,6 +282,7 @@ header>p {
     width: 100%;
     z-index: 20;
     border-radius: 50%;
+    transition: all 0.2s;
 }
 
 .item_container>img:hover {
@@ -388,8 +389,8 @@ header>p {
 }
 
 .don_container>a>img {
-    width: 60%;
-    height: 35%;
+    width: 50%;
+    height: 30%;
 }
 .HEI{
     transition: all 0.2s;
