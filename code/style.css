@@ -430,11 +430,10 @@ svg {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 15%;
+    width: 20%;
     height: 100%;
     justify-content: center;
     gap: 3%;
-    background-color: red;
 
 }
 .text_conteneur_2 > a{
@@ -444,7 +443,7 @@ svg {
     font-size: 1.5rem;
     height: 20%;
     width: 20%;
-    margin-left: 35%;
+    margin-left: 45%;
     display: flex;
     text-align: center;
     align-items: center;
@@ -469,7 +468,7 @@ svg {
 }
 
 .text_conteneur_2 img {
-    width: 5%;
+    width: 15%;
     height:75%;
 }
 
