@@ -258,7 +258,9 @@ header>p {
 
 .location>h1 {
     text-align: center;
+    color: black;
 }
+
 
 .item {
     width: 100%;
@@ -489,7 +491,7 @@ svg {
 }
 
 #location_text {
-    opacity: 0;
+    
     transition: transform 1s, opacity 1s;
 }
 
