@@ -132,7 +132,7 @@ header {
     animation-name: background_appear;
     animation-duration: 2.5s;
     animation-direction: alternate;
-    background-image: url("../asset/hero_image1.jpg");
+    background-image: url("asset/hero_image1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
